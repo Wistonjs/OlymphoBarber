@@ -12,7 +12,7 @@
             <div class="info-childs">
                 <h2>Bienvenido a Olympho Barber Club</h2>
                 <p>Si aún no ha creado su cuenta registrese aquí</p>
-                <a href="register.html"><input type="button" value="Registrarme" id="sign-up"></a>
+                <a href="register.php"><input type="button" value="Registrarme" id="sign-up"></a>
             </div>
         </div>
         <div class="form-informacion">

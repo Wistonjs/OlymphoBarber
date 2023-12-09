@@ -27,29 +27,32 @@
             </body>
         </nav>
         <div class="text-box">
-            <h1>La barbería con mejor calidad en el sector </h1>
-            <p>En este sitio web podrá encontrar la información de los cortes y productos que ofrecemos</p>
-            <br>
-            <p>También podrá ver donde estamos ubicados y el horario que trabajamos.</p>
-            <a href="" class="hero-btn">Sobre nosotros</a>
+            <h1>Sobre nosotros</h1>
+            <p>Somos una barbería que se ubica en Santo Domingo-Ciudad bolivar y busca seguir creciendo, puedes venir, hay un mirador que queda cerca de nosotros, no es peligroso 
+                como imaginas
+                 nuestros barbero cumplen con calidad y respeto a sus clientes, buscamos siempre mejorar, puedes jugar juegos clásicos en un espacio que pueden usar los clientes
+                 que reservaron su corte, siempre te recibiremos de buena forma.</p>
+            <p>Somos reconocidos por que los primeros barberos eran amigos de una gran parte de personas en nuestro sector, mostraron un grán talento y gracias a esto el número de 
+                clientes creció demasiado. Esto hizo que crearamos esta página web para que puedas agendar un corte que especifiques y también agregando servicios adiionales como 
+                corte de barba o cejas, esperamos que te sirva demasiado y que vuelvas a agendar cortes en esta página ya que nos serviría mucho para seguir creciendo.</p>
+            <a href="agendamiento.php" class="hero-btn">Agende ahora mismo</a>
         </div>
     </section>
     <section class="nosotros">
         <h1>Los cortes que ofrecemos</h1>
-        <p>Nosotros ofrecemos todo tipo de cortes, nuestros barberos pueden realizar el corte que el 
-        cliente desee mientras que de las especificaciones que quiere el cliente</p>
+        <p>Nosotros ofrecemos todo tipo de cortes populares, clásicos o el que más te guste, nuestros barberos pueden realizar el corte que el 
+        cliente desee mientras que de las especificaciones que quiere el cliente sin embargo cumplimos con 2 fundamentos especificos para atender a nuestros clientes.</p>
         <div class="row">
             <div class="nosotros-col">
                 <h3>Calidad</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae enim 
-                    at natus ad est quidem ab sint, cumque error eaque molestias molestiae amet 
-                    suscipit aspernatur maiores eligendi similique esse fugiat.</p>
+                <p>Siempre daremos lo mejor de nosotros mientras se realiza un corte, siempre se intentará terminar y entregar el corte como nos especificó nuestro cliente
+                    sin faltar detalles.
+                </p>
             </div>
             <div class="nosotros-col">
-                <h3>Sobre nosotros</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae enim 
-                    at natus ad est quidem ab sint, cumque error eaque molestias molestiae amet 
-                    suscipit aspernatur maiores eligendi similique esse fugiat.</p>
+                <h3>Tranquilidad</h3>
+                <p>Si se hace algo sin paciencia quedará mal y por consecuencia tendremos malos resultados y nos afectaría... Por eso siempre haremos un corte con tranquilidad, 
+                    nos tomaremos un tiempo pero no te decepcionaremos.</p>
             </div>
         </div>
     </section>

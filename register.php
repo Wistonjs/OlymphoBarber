@@ -13,7 +13,7 @@
                 <h2>Bienvenido a Olympho Barber Club</h2>
                 <p>Para disfrutar de poder agendar o comprar productos en nuestra 
                 página por favor inicia sesión con los siguientes datos solicitados</p>
-                <a href="login.html"><input type="button" value="Iniciar sesión" id="sign-in"></a>
+                <a href="login.php"><input type="button" value="Iniciar sesión" id="sign-in"></a>
             </div>
         </div>
         <div class="form-informacion">
