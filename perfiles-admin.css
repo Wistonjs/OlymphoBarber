@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.conexion{
+    display: none;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #cf4949;
+    padding: 15px;
+    height: 80px;
+}
+
+nav img {
+    margin-top: 10px;
+    width: 130px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #3682f4;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+nav .fa{
+    display: none;
+}
+
+.text-box{
+    margin-top: 40px;
+    width: 90%;
+    color: #000000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    border: 1px solid #cf4949;
+    padding: 8px 34px;
+    font-size: 9px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.144);
+    border-radius: 10px;
+}
+
+.text-box h1{
+    font-size: 32px;
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 17px;
+    color: #000000;
+}
+
+.hero-btn{
+    display: inline-flex;
+    text-decoration: none;
+    color: #000000;
+    border: 1px solid #000000;
+    padding: 12px 54px;
+    font-size: 19px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover{
+    border: 1px solid #3682f4;
+    background: #3682f4;
+    transition: 1s;
+}
+
+.header table{
+    border-collapse: separate;
+    border-spacing: 20px;
+    margin: 0 auto;
+}
+
+.header tr{
+    font-size: 15px;
+    top: 50%;
+    left: 50%;
+    padding: 10px;
+}
