@@ -48,7 +48,6 @@
                             <th>Teléfono</th>
                             <th>Correo electrónico</th>
                             <th>Contraseña</th>
-                            <th>Detalle del servicio</th>
                         </tr>
                     </thead>
                     <TBody>
@@ -56,12 +55,11 @@
                             while($row = mysqli_fetch_assoc($result)){
                             ?>
                         <tr>
-                            <td><?php echo $row['nombre'] ?></td>
+                            <td><?php echo $row['txtNombre'] ?></td>
                             <td><?php echo $row['apellido'] ?></td>
                             <td><?php echo $row['telefono'] ?></td>
                             <td><?php echo $row['E-mail'] ?></td>
                             <td><?php echo $row['password'] ?></td>
-                            <td><?php echo $row['detalle_del_servicio'] ?></td>
                             <td>
                                 <a href="register.php">Agregar</a>
                                 <a href="editar.php?id=<?php echo $row['id']?>">Editar</a>

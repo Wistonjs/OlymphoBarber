@@ -44,6 +44,8 @@
                 <input type="text" name="txtUser" value="<?php echo $row['usuario']?>"><br><br>
                 <label>Email</label>
                 <input type="text" name="emailUser" value="<?php echo $row['email']?>"><br><br>
+                <label>Contraseña</label>
+                <input type= "" name="passUser" value="<?php echo $row['contrasenia']?>">
                 <input type="submit" name="" value="Actualizar">
                 <a href="perfiles_admin.php">Regresar</a> 
             </form>
@@ -58,8 +60,9 @@
     $idp=$_POST['txtid']
     $user=$_POST ['txtUser']
     $emailUser=$_POST['emailUser']
+    $password=$_POST['passUser']
     if($user!=null || $email !=null) {
-        $sql="update persona set usuario='" .$user. "',email='".$emailUser"' where id='".$idp."'";
+        $sql="update persona set usuario='".$password."',passUser'" .$user. "',email='".$emailUser"' where id='".$idp."'";
         if (mysqli_query($conexion, $sql)){
             echo "Cambio realizado con exito";
             header("location:perfiles-admin.php")
