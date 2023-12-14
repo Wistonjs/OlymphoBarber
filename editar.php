@@ -59,7 +59,7 @@
     $user=$_POST ['txtUser']
     $emailUser=$_POST['emailUser']
     if($user!=null || $email !=null) {
-        $sql="update persona set usuario='" .$user. "',email='".$emailUser"' where id='".idp."'";
+        $sql="update persona set usuario='" .$user. "',email='".$emailUser"' where id='".$idp."'";
         if (mysqli_query($conexion, $sql)){
             echo "Cambio realizado con exito";
             header("location:perfiles-admin.php")
