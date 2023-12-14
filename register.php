@@ -9,10 +9,9 @@
 <body>
     <div class="conexion">
         <?php include 'conexion.php';
-
         $sql = 'select * from usuario';
         $result = mysqli_query($conexion,$sql);
-    ?>
+        ?>
     </div>
     <div class="container-form register">
         <div class="informacion">
@@ -29,24 +28,26 @@
                 <p>Usa tu e-mail para registrarte</p>
                 <form method="post" action="agregar.php" class="form">
                     <center>
-                    <label for="">
-                            <input type="text" placeholder="Nombre">
+                        <label for="">
+                            <input type="text" placeholder="Nombre" name="txtNombre">
                         </label>
                         <label for="">
-                            <input type="text" placeholder="Apellido">
+                            <input type="text" placeholder="Apellido" name="txtApellido">
                         </label>
                         <label for="">
-                            <input type="email" placeholder="Correo electrónico" name="txtUser">
+                            <input type="text" placeholder="Usuario" name="txtUser">
                         </label>
                         <label for="">
-                            <input type="password" placeholder="Contraseña" name="txtEmail">
+                            <input type="email" placeholder="Correo electrónico" name="emailUser">
                         </label>
                         <label for="">
-                            <input type="number" placeholder="Número de teléfono">
+                            <input type="password" placeholder="Contraseña" name="passUser">
+                        </label>
+                        <label for="">
+                            <input type="number" placeholder="Número de teléfono" name="numUser">
                         </label>
                         <input type="submit" value="Registrarme" name="">
-                        <a href="agregar.php">Nuevo</a>
-                        <a href="register.php">Refrescar</a>
+                        <a href="register.php">Regresar</a>
                     </center>
                 </form>
             </div>
@@ -57,5 +58,21 @@
 </html>
 
 <?php 
-    include 'c'
+    $nombre=$_POST['txtNombre'];
+    $apellido=$_POST['txtApellido'];
+    $user=$_POST['txtUser'];
+    $emailUser=$_POST['emailUser'];
+    $password=$_POST['passUser'];
+    $contactUser=$_POST['numUser'];
+
+        if($nombre !=null || $apellido !=null || $user !=null || $emailUser !=null || $password || $contactUser !=null) {
+            $sql="Inserte los datos que se necesitan para poder registrarse existosamente
+            (Nombre, Apellido, Usuario, Email, Contraseña, Número de contacto) values ('".$nombre."','"$apellido"','".$user."','"$emailUser"','".$password."','"$contactUser"')";
+            if(mysqli_query($conexion, $sql)){
+                echo "Cuenta creada exitosamente";
+                header("location:perfiles-admin.php")
+            } else{
+                echo "Hay un error" .$sql. "<br>" .mysqli_error($conexion)
+            }
+        }
 ?>

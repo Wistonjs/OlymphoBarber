@@ -12,11 +12,10 @@
 </head>
 <body>
     <div class="conexion">
-    <?php include 'conexion.php';
-
-    $sql = 'select * from usuario';
-    $result = mysqli_query($conexion,$sql);
-    ?>
+        <?php include 'conexion.php';
+        $sql = 'select * from usuario';
+        $result = mysqli_query($conexion,$sql);
+        ?>
     </div>
     <section class="header">
         <nav>
@@ -64,7 +63,8 @@
                             <td><?php echo $row['password'] ?></td>
                             <td><?php echo $row['detalle_del_servicio'] ?></td>
                             <td>
-                                <a href="">Editar</a>
+                                <a href="register.php">Agregar</a>
+                                <a href="editar.php?id=<?php echo $row['id']?>">Editar</a>
                                 <a href="">Eliminar</a> <?php echo "<br>" ?>
                             </td>
                         </tr>
