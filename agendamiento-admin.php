@@ -30,10 +30,9 @@
         </nav>
         <div class="text-box">
             <h1>Agendamientos de usuarios de la barbería</h1>
-            <p>En la siguiente tabla encontrará toda la información de todos los usuarios registrados en la barbería.</p>
+            <p>En la siguiente tabla encontrará toda la información de todos los agendamientos registrados en la barbería.</p>
             <p>Puede editar o eliminar datos de los agendamientos</p>
             <p>Acuerdese que los datos se manipulan de manera RESPONSABLE</p>
-            <!-----<a href="agendamiento.php" class="hero-btn">Agende ahora mismo</a>------->
             <div class="datos">
                 <table>
                     <thead>
