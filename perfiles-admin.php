@@ -63,7 +63,7 @@
                             <td>
                                 <a href="register.php">Agregar</a>
                                 <a href="editar.php?id=<?php echo $row['id']?>">Editar</a>
-                                <a href="">Eliminar</a> <?php echo "<br>" ?>
+                                <a href="eliminar.php?id=<?php echo $row['id']?>">Eliminar</a> <?php echo "<br>" ?>
                             </td>
                         </tr>
                         <?php } mysqli_close($conexion) ?>
