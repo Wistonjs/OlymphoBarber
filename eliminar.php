@@ -1,7 +1,7 @@
 <?php include 'conexion.php'
-    $id=$_GET['id'];
+    $idp=$_GET['idusuario'];
 
-    $sql="delete from persona where id= '".$id."'";
+    $sql="delete from usuario where id= '".$idp."'";
 
     $result = mysqli_query($conexion, $sql);
         header(location:perfiles-admin.php)

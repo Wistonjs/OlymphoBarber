@@ -24,13 +24,13 @@
                 <p>Usa tu e-mail para registrarte</p>
                 <form method="post" action="register.php" class="form">
                     <center>
-                        <label for="">
+                        <!---<label for="">
                             <input type="text" placeholder="Genero" name="txtGenero"><select name="" id="">
                                 <option value="">Hombre</option>
                                 <option value="">Mujer</option>
                                 <option value="">Otro</option>
                             </select>
-                        </label>
+                        </label>--->
                         <label for="">
                             <input type="text" placeholder="Nombre" name="nombre">
                         </label>

@@ -13,7 +13,7 @@
 <body>
     <div class="conexion">
         <?php include 'conexion.php';
-        $sql = 'select * from ususario';
+        $sql = 'select * from usuario';
         $result = mysqli_query($conexion,$sql);
         ?>
     </div>
@@ -62,8 +62,8 @@
                             <td><?php echo $row['contraseña'] ?></td>
                             <td>
                                 <a href="register.php">Agregar</a>
-                                <a href="editar.php?id=<?php echo $row['id']?>">Editar</a>
-                                <a href="eliminar.php?id=<?php echo $row['id']?>">Eliminar</a> <?php echo "<br>" ?>
+                                <a href="editar.php?id=<?php echo $row['idusuario']?>">Editar</a>
+                                <a href="eliminar.php?id=<?php echo $row['idususario']?>">Eliminar</a> <?php echo "<br>" ?>
                             </td>
                         </tr>
                         <?php } mysqli_close($conexion) ?>

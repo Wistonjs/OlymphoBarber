@@ -23,7 +23,7 @@
                 <div class="conexion">
                     <?php include 'conexion.php';
                     include 'controlador-login.php';
-                    $sql = 'select * from ususario';
+                    $sql = 'select * from usuario';
                     $result = mysqli_query($conexion,$sql);
                     ?>
                 </div>

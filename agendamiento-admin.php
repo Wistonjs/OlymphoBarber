@@ -50,8 +50,8 @@
                             while($row = mysqli_fetch_assoc($result)){
                             ?>
                         <tr>
-                            <td><?php echo $row['txtNombre'] ?></td>
-                            <td><?php echo $row['txtApellido'] ?></td>
+                            <td><?php echo $row['nombre'] ?></td>
+                            <td><?php echo $row['apellido'] ?></td>
                             <td><?php echo $row['reqCorte'] ?></td>
                             <td><?php echo $row['compraPro'] ?></td>
                             <td><?php echo $row['servAd'] ?></td>
