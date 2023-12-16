@@ -70,7 +70,7 @@
     $emailUser=$_POST['correoElectronico'];
     $password=$_POST['contraseña'];
     /*$contactUser=$_POST['numUser'];*/
-        if($nombre !=null || $apellido !=null || $user !=null || $emailUser !=null || $password !=null)/**/{ 
+        if($nombre !=null || $apellido !=null || $user !=null || $emailUser !=null || $password !=null){ 
             $sql="insert into ususario (nombre, apellido, txtUser, correoElectronico, contraseña) values ('".$nombre."','".$apellido."','".$user."','".$emailUser."','".$password."')"; /*.$contactUser."')";*/
             if(mysqli_query($conexion, $sql)){
                 echo "Cuenta creada exitosamente";
