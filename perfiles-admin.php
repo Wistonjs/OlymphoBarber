@@ -24,10 +24,10 @@
                 <div class="nav-links" id="navLinks">
                     <i class="fa fa-times" onclick="hideMenu()"></i>
                     <ul>
-                        <li><a href="inicio.html">Inicio</a></li>
+                        <li><a href="inicio.php">Inicio</a></li>
                         <li><a href="login.php">Agendamientos</a></li>
                         <li><a href="login.php">Usuarios</a></li>
-                        <li><a href="catalogo.html">Productos</a></li>
+                        <li><a href="catalogo.php">Productos</a></li>
                     </ul>
                 </div>
                 <i class="fa fa-bars" onclick="showMenu()"></i>

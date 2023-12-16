@@ -9,7 +9,7 @@
     <section class="header">
         <nav>
             <body>
-                <a href="inicio.html"><img src="iconos/iconoprincipal-blanco.png" alt=""></a>
+                <a href="inicio.php"><img src="iconos/iconoprincipal-blanco.png" alt=""></a>
                 <div class="nav-links" id="navLinks">
                     <i class="fa fa-times" onclick="hideMenu()"></i>
                     <ul>
