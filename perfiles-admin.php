@@ -20,14 +20,14 @@
     <section class="header">
         <nav>
             <body>
-                <a href="inicio.html"><img src="iconos/iconoprincipal-blanco.png" alt=""></a>
+                <a href="inicio.php"><img src="iconos/iconoprincipal-blanco.png" alt=""></a>
                 <div class="nav-links" id="navLinks">
                     <i class="fa fa-times" onclick="hideMenu()"></i>
                     <ul>
-                        <li><a href="inicio.html">Inicio</a></li>
-                        <li><a href="login.html">Agendamientos</a></li>
+                        <li><a href="inicio.php">Inicio</a></li>
+                        <li><a href="login.php">Agendamientos</a></li>
                         <li><a href="login.php">Usuarios</a></li>
-                        <li><a href="catalogo.html">Productos</a></li>
+                        <li><a href="catalogo.php">Productos</a></li>
                     </ul>
                 </div>
                 <i class="fa fa-bars" onclick="showMenu()"></i>
@@ -62,8 +62,8 @@
                             <td><?php echo $row['contraseña'] ?></td>
                             <td>
                                 <a href="register.php">Agregar</a>
-                                <a href="editar.php?id=<?php echo $row['id']?>">Editar</a>
-                                <a href="eliminar.php?id=<?php echo $row['id']?>">Eliminar</a> <?php echo "<br>" ?>
+                                <a href="editar.php?id=<?php echo $row['idususario']?>">Editar</a>
+                                <a href="eliminar.php?id=<?php echo $row['idususario']?>">Eliminar</a> <?php echo "<br>" ?>
                             </td>
                         </tr>
                         <?php } mysqli_close($conexion) ?>
@@ -74,3 +74,4 @@
     </section>
 </body>
 </html>
+.html

@@ -14,14 +14,14 @@
 <div>
     <nav>
         <body>
-            <a href="inicio.html"><img src="iconos/iconoprincipal-blanco.png" alt=""></a>
+            <a href="inicio.php"><img src="iconos/iconoprincipal-blanco.png" alt=""></a>
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="inicio.html">Inicio</a></li>
-                    <li><a href="login.html">Entrar</a></li>
-                    <li><a href="agendamiento.html">Agendar</a></li>
-                    <li><a href="catalogo.html">Cortes</a></li>
+                    <li><a href="inicio.php">Inicio</a></li>
+                    <li><a href="login.php">Entrar</a></li>
+                    <li><a href="agendamiento.php">Agendar</a></li>
+                    <li><a href="catalogo.php">Cortes</a></li>
                 </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
