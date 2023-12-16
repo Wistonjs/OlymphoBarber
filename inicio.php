@@ -21,6 +21,7 @@
                         <li><a href="login.html">Entrar</a></li>
                         <li><a href="agendamiento.html">Agendar</a></li>
                         <li><a href="catalogo.html">Cortes</a></li>
+                        <li><a href="controlador-cerrar-sesion.php">Cerrar sesión</a></li>
                     </ul>
                 </div>
                 <i class="fa fa-bars" onclick="showMenu()"></i>

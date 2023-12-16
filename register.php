@@ -77,7 +77,7 @@
             (Nombre, Apellido, Usuario, Email, Contraseña, Número de contacto) values ('".$nombre."','"$apellido"','".$user."','"$emailUser"','".$password."','"$contactUser"')";
             if(mysqli_query($conexion, $sql)){
                 echo "Cuenta creada exitosamente";
-                header("location:perfiles-admin.php")
+                header("location:inicio.php")
             } else{
                 echo "Hay un error" .$sql. "<br>" .mysqli_error($conexion)
             }

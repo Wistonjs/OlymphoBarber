@@ -19,14 +19,21 @@
             <div class="form-informacion-childs">
                 <h2>Iniciar sesion</h2>
                 <p>Inicie sesión con su cuenta</p>
-                <form class="form">
+                <form class="form" method="post">
+                <div class="conexion">
+                    <?php include 'conexion.php';
+                    include 'controlador-login.php';
+                    $sql = 'select * from usuario';
+                    $result = mysqli_query($conexion,$sql);
+                    ?>
+                </div>
                     <label for="">
-                        <input type="email" placeholder="Correo electrónico">
+                        <input type="text" placeholder="usuario" name="txtUser">
                     </label>
                     <label for="">
-                        <input type="password" placeholder="Contraseña">
+                        <input type="password" placeholder="Contraseña" name="passUser">
                     </label>
-                    <input type="submit" value="Iniciar sesion">
+                    <input type="submit" value="Iniciar sesion" name="btnIngresar">
                 </form>
             </div>
         </div>

@@ -56,7 +56,7 @@
                             ?>
                         <tr>
                             <td><?php echo $row['txtNombre'] ?></td>
-                            <td><?php echo $row['apellido'] ?></td>
+                            <td><?php echo $row['txtApellido'] ?></td>
                             <td><?php echo $row['telefono'] ?></td>
                             <td><?php echo $row['E-mail'] ?></td>
                             <td><?php echo $row['password'] ?></td>
