@@ -12,10 +12,6 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url(imagenes/img-login-logout.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
 }
 
 .container-form{
