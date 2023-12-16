@@ -13,20 +13,20 @@
                 <div class="nav-links" id="navLinks">
                     <i class="fa fa-times" onclick="hideMenu()"></i>
                     <ul>
-                        <li><a href="inicio.html">Inicio</a></li>
-                        <li><a href="login.html">Entrar</a></li>
-                        <li><a href="agendamiento.html">Agendar</a></li>
-                        <li><a href="catalogo.html">Cortes</a></li>
+                        <li><a href="inicio-admin.html">Inicio</a></li>
+                        <li><a href="perfiles-admin.php">Usuarios</a></li>
+                        <li><a href="agendamiento-admin.html">Agendamientos</a></li>
+                        <li><a href="catalogo-admin.html">Cortes</a></li>
                     </ul>
                 </div>
                 <i class="fa fa-bars" onclick="showMenu()"></i>
             </body>
         </nav>
         <div class="text-box">
-            <h1>Bienvenido, administrador, tiene </h1>
+            <h1>Bienvenido administrador</h1>
             <p></p>
             <br>
-            <p>También podrá ver donde estamos ubicados y el horario que trabajamos.</p>
+            <p>Acá podrá ver toda la información necesaria para administrar esta página.</p>
             <a href="" class="hero-btn">Sobre nosotros</a>
         </div>
     </section>

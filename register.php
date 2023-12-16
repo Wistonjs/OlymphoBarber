@@ -29,6 +29,13 @@
                 <form method="post" action="agregar.php" class="form">
                     <center>
                         <label for="">
+                            <input type="text" placeholder="Genero" names="txtGenero"><select name="" id="">
+                                <option value="">Hombre</option>
+                                <option value="">Mujer</option>
+                                <option value="">Otro</option>
+                            </select>
+                        </label>
+                        <label for="">
                             <input type="text" placeholder="Nombre" name="txtNombre">
                         </label>
                         <label for="">
@@ -53,11 +60,11 @@
             </div>
         </div>
     </div>
-    <script src="login.js"></script>
 </body>
 </html>
 
 <?php 
+    $genero=$_POST['txtGenero']
     $nombre=$_POST['txtNombre'];
     $apellido=$_POST['txtApellido'];
     $user=$_POST['txtUser'];
@@ -65,12 +72,12 @@
     $password=$_POST['passUser'];
     $contactUser=$_POST['numUser'];
 
-        if($nombre !=null || $apellido !=null || $user !=null || $emailUser !=null || $password || $contactUser !=null) {
+        if($genero!=null || $nombre !=null || $apellido !=null || $user !=null || $emailUser !=null || $password || $contactUser !=null) {
             $sql="Inserte los datos que se necesitan para poder registrarse existosamente
             (Nombre, Apellido, Usuario, Email, Contraseña, Número de contacto) values ('".$nombre."','"$apellido"','".$user."','"$emailUser"','".$password."','"$contactUser"')";
             if(mysqli_query($conexion, $sql)){
                 echo "Cuenta creada exitosamente";
-                header("location:perfiles-admin.php")
+                header("location:inicio.php")
             } else{
                 echo "Hay un error" .$sql. "<br>" .mysqli_error($conexion)
             }

@@ -13,7 +13,7 @@
 <body>
     <div class="conexion">
         <?php include 'conexion.php';
-        $sql = 'select * from usuario';
+        $sql = 'select * from ususario';
         $result = mysqli_query($conexion,$sql);
         ?>
     </div>
@@ -48,7 +48,6 @@
                             <th>Teléfono</th>
                             <th>Correo electrónico</th>
                             <th>Contraseña</th>
-                            <th>Detalle del servicio</th>
                         </tr>
                     </thead>
                     <TBody>
@@ -58,14 +57,13 @@
                         <tr>
                             <td><?php echo $row['nombre'] ?></td>
                             <td><?php echo $row['apellido'] ?></td>
-                            <td><?php echo $row['telefono'] ?></td>
-                            <td><?php echo $row['E-mail'] ?></td>
-                            <td><?php echo $row['password'] ?></td>
-                            <td><?php echo $row['detalle_del_servicio'] ?></td>
+                            <td><?php echo $row['numeroTelefono'] ?></td>
+                            <td><?php echo $row['correoElectronico'] ?></td>
+                            <td><?php echo $row['contraseña'] ?></td>
                             <td>
                                 <a href="register.php">Agregar</a>
                                 <a href="editar.php?id=<?php echo $row['id']?>">Editar</a>
-                                <a href="">Eliminar</a> <?php echo "<br>" ?>
+                                <a href="eliminar.php?id=<?php echo $row['id']?>">Eliminar</a> <?php echo "<br>" ?>
                             </td>
                         </tr>
                         <?php } mysqli_close($conexion) ?>

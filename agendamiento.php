@@ -42,14 +42,16 @@
                     <form class="form">
                         <p>Diga el nombre de su corte o especifíquelo</p>
                         <label for="">
-                            <input type="text" placeholder="Nombre de corte">
+                            <input type="text" placeholder="Nombre de corte" name="nombreCorte">
                         </label>
                         <p>¿Algún servicio adicional?(cejas, barba)</p>
                         <label for="">
-                            <input type="text" placeholder="Servicio adicional?">
+                            <input type="text" placeholder="Servicio adicional?" name="servAd">
                         </label>
-                        <p>Día deseado</p>
-                        <input type="date" value="Día deseado">
+                        <label for="">
+                            <p>Día deseado</p>
+                            <input type="date" value="Día deseado" name="diaDese">
+                        </label>
                         <input type="submit" value="Agendar">
                     </form>
                 </div>
@@ -67,3 +69,20 @@
     </header>
 </body>
 </html>
+
+<?php 
+    $nombCor=$_POST['nombreCorte']
+    $serviAd=$_POST['servAd'];
+    $diaDese=$_POST['diaDese'];
+
+        if($nombCor!=null || $serviAd !=null || $diaDese !=null) {
+            $sql="Para agendar debe llenar la información! como ('".$nombCor."','".$serviAd."','".$diaDese."')";
+            if(mysqli_query($conexion, $sql)){
+                echo "Cuenta creada exitosamente";
+                header("location:confirmación-agendamiento.php")
+            } else{
+                echo "Hay un error" .$sql. "<br>" .mysqli_error($conexion)
+            }
+        }
+?>
+
