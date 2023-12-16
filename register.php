@@ -8,10 +8,6 @@
 </head>
 <body>
     <div class="conexion">
-        <?php include 'conexion.php';
-        $sql = 'select * from usuario';
-        $result = mysqli_query($conexion,$sql);
-        ?>
     </div>
     <div class="container-form register">
         <div class="informacion">
@@ -26,7 +22,7 @@
             <div class="form-informacion-childs">
                 <h2>Crear una cuenta</h2>
                 <p>Usa tu e-mail para registrarte</p>
-                <form method="post" action="agregar.php" class="form">
+                <form method="post" action="register.php" class="form">
                     <center>
                         <label for="">
                             <input type="text" placeholder="Genero" names="txtGenero"><select name="" id="">
@@ -36,22 +32,22 @@
                             </select>
                         </label>
                         <label for="">
-                            <input type="text" placeholder="Nombre" name="txtNombre">
+                            <input type="text" placeholder="Nombre" name="nombre">
                         </label>
                         <label for="">
-                            <input type="text" placeholder="Apellido" name="txtApellido">
+                            <input type="text" placeholder="Apellido" name="apellido">
                         </label>
                         <label for="">
                             <input type="text" placeholder="Usuario" name="txtUser">
                         </label>
                         <label for="">
-                            <input type="email" placeholder="Correo electrónico" name="emailUser">
+                            <input type="email" placeholder="Correo electrónico" name="correoElectronicor">
                         </label>
                         <label for="">
-                            <input type="password" placeholder="Contraseña" name="passUser">
+                            <input type="password" placeholder="Contraseña" name="contraseñar">
                         </label>
                         <label for="">
-                            <input type="number" placeholder="Número de teléfono" name="numUser">
+                            <!-----<input type="number" placeholder="Número de teléfono" name="numUser">----->
                         </label>
                         <input type="submit" value="Registrarme" name="">
                         <a href="register.php">Regresar</a>
@@ -64,22 +60,23 @@
 </html>
 
 <?php 
-    $genero=$_POST['txtGenero']
-    $nombre=$_POST['txtNombre'];
-    $apellido=$_POST['txtApellido'];
-    $user=$_POST['txtUser'];
-    $emailUser=$_POST['emailUser'];
-    $password=$_POST['passUser'];
-    $contactUser=$_POST['numUser'];
+    include 'conexion.php';
+    /*$result = mysqli_query($conexion,$sql);*/
 
-        if($genero!=null || $nombre !=null || $apellido !=null || $user !=null || $emailUser !=null || $password || $contactUser !=null) {
-            $sql="Inserte los datos que se necesitan para poder registrarse existosamente
-            (Nombre, Apellido, Usuario, Email, Contraseña, Número de contacto) values ('".$nombre."','"$apellido"','".$user."','"$emailUser"','".$password."','"$contactUser"')";
+    /*$genero=$_POST['genero'];*/
+    $nombre=$_POST['nombre'];
+    $apellido=$_POST['apellido'];
+    $user=$_POST['txtUser'];
+    $emailUser=$_POST['correoElectronico'];
+    $password=$_POST['contraseña'];
+    /*$contactUser=$_POST['numUser'];*/
+        if($nombre !=null || $apellido !=null || $user !=null || $emailUser !=null || $password !=null){ 
+            $sql="insert into ususario (nombre, apellido, txtUser, correoElectronico, contraseña) values ('".$nombre."','".$apellido."','".$user."','".$emailUser."','".$password."')"; /*.$contactUser."')";*/
             if(mysqli_query($conexion, $sql)){
                 echo "Cuenta creada exitosamente";
-                header("location:inicio.php")
+                header("location:inicio.php");
             } else{
-                echo "Hay un error" .$sql. "<br>" .mysqli_error($conexion)
+                echo "Hay un error" .$sql. "<br>" .mysqli_error($conexion);
             }
         }
 ?>

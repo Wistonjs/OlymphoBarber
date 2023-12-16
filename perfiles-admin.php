@@ -25,7 +25,7 @@
                     <i class="fa fa-times" onclick="hideMenu()"></i>
                     <ul>
                         <li><a href="inicio.html">Inicio</a></li>
-                        <li><a href="login.html">Agendamientos</a></li>
+                        <li><a href="login.php">Agendamientos</a></li>
                         <li><a href="login.php">Usuarios</a></li>
                         <li><a href="catalogo.html">Productos</a></li>
                     </ul>
