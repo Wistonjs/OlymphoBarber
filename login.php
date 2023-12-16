@@ -23,7 +23,7 @@
                 <div class="conexion">
                     <?php include 'conexion.php';
                     include 'controlador-login.php';
-                    $sql = 'select * from usuario';
+                    $sql = 'select * from ususario';
                     $result = mysqli_query($conexion,$sql);
                     ?>
                 </div>
@@ -31,7 +31,7 @@
                         <input type="text" placeholder="usuario" name="txtUser">
                     </label>
                     <label for="">
-                        <input type="password" placeholder="Contraseña" name="passUser">
+                        <input type="password" placeholder="Contraseña" name="contraseña">
                     </label>
                     <input type="submit" value="Iniciar sesion" name="btnIngresar">
                 </form>

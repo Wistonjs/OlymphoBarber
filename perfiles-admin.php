@@ -13,7 +13,7 @@
 <body>
     <div class="conexion">
         <?php include 'conexion.php';
-        $sql = 'select * from usuario';
+        $sql = 'select * from ususario';
         $result = mysqli_query($conexion,$sql);
         ?>
     </div>
@@ -55,11 +55,11 @@
                             while($row = mysqli_fetch_assoc($result)){
                             ?>
                         <tr>
-                            <td><?php echo $row['txtNombre'] ?></td>
-                            <td><?php echo $row['txtApellido'] ?></td>
-                            <td><?php echo $row['telefono'] ?></td>
-                            <td><?php echo $row['E-mail'] ?></td>
-                            <td><?php echo $row['password'] ?></td>
+                            <td><?php echo $row['nombre'] ?></td>
+                            <td><?php echo $row['apellido'] ?></td>
+                            <td><?php echo $row['numeroTelefono'] ?></td>
+                            <td><?php echo $row['correoElectronico'] ?></td>
+                            <td><?php echo $row['contraseña'] ?></td>
                             <td>
                                 <a href="register.php">Agregar</a>
                                 <a href="editar.php?id=<?php echo $row['id']?>">Editar</a>
