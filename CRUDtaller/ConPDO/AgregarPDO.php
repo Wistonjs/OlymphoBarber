@@ -49,8 +49,6 @@
                 echo "Error:".$sql."<br>".mysqli_error($connect);
             }
         }
-
-
         ?>
     </body>
 </html>

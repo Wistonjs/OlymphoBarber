@@ -25,7 +25,7 @@
                 <form method="post" action="register.php" class="form">
                     <center>
                         <label for="">
-                            <input type="text" placeholder="Genero" names="txtGenero"><select name="" id="">
+                            <input type="text" placeholder="Genero" name="txtGenero"><select name="" id="">
                                 <option value="">Hombre</option>
                                 <option value="">Mujer</option>
                                 <option value="">Otro</option>
@@ -62,7 +62,6 @@
 <?php 
     include 'conexion.php';
     /*$result = mysqli_query($conexion,$sql);*/
-
     /*$genero=$_POST['genero'];*/
     $nombre=$_POST['nombre'];
     $apellido=$_POST['apellido'];
@@ -71,7 +70,7 @@
     $password=$_POST['contraseña'];
     /*$contactUser=$_POST['numUser'];*/
         if($nombre !=null || $apellido !=null || $user !=null || $emailUser !=null || $password !=null){ 
-            $sql="insert into ususario (nombre, apellido, txtUser, correoElectronico, contraseña) values ('".$nombre."','".$apellido."','".$user."','".$emailUser."','".$password."')"; /*.$contactUser."')";*/
+            $sql="insert into usuario (nombre, apellido, txtUser, correoElectronico, contraseña) values ('".$nombre."','".$apellido."','".$user."','".$emailUser."','".$password."')"; /*.$contactUser."')";*/
             if(mysqli_query($conexion, $sql)){
                 echo "Cuenta creada exitosamente";
                 header("location:inicio.php");

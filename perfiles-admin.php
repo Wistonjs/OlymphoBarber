@@ -13,14 +13,14 @@
 <body>
     <div class="conexion">
         <?php include 'conexion.php';
-        $sql = 'select * from ususario';
+        $sql = 'select * from usuario';
         $result = mysqli_query($conexion,$sql);
         ?>
     </div>
     <section class="header">
         <nav>
             <body>
-                <a href="inicio.html"><img src="iconos/iconoprincipal-blanco.png" alt=""></a>
+                <a href="inicio.php"><img src="iconos/iconoprincipal-blanco.png" alt=""></a>
                 <div class="nav-links" id="navLinks">
                     <i class="fa fa-times" onclick="hideMenu()"></i>
                     <ul>
@@ -62,8 +62,8 @@
                             <td><?php echo $row['contraseña'] ?></td>
                             <td>
                                 <a href="register.php">Agregar</a>
-                                <a href="editar.php?id=<?php echo $row['id']?>">Editar</a>
-                                <a href="eliminar.php?id=<?php echo $row['id']?>">Eliminar</a> <?php echo "<br>" ?>
+                                <a href="editar.php?id=<?php echo $row['idusuario']?>">Editar</a>
+                                <a href="eliminar.php?id=<?php echo $row['idusuario']?>">Eliminar</a> <?php echo "<br>" ?>
                             </td>
                         </tr>
                         <?php } mysqli_close($conexion) ?>

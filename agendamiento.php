@@ -14,14 +14,14 @@
 <div>
     <nav>
         <body>
-            <a href="inicio.html"><img src="iconos/iconoprincipal-blanco.png" alt=""></a>
+            <a href="inicio.php"><img src="iconos/iconoprincipal-blanco.png" alt=""></a>
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="inicio.html">Inicio</a></li>
-                    <li><a href="login.html">Entrar</a></li>
-                    <li><a href="agendamiento.html">Agendar</a></li>
-                    <li><a href="catalogo.html">Cortes</a></li>
+                    <li><a href="inicio.php">Inicio</a></li>
+                    <li><a href="login.php">Entrar</a></li>
+                    <li><a href="agendamiento.php">Agendar</a></li>
+                    <li><a href="catalogo.php">Cortes</a></li>
                 </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
@@ -45,13 +45,13 @@
                             <input type="text" placeholder="Nombre de corte" name="nombreCorte">
                         </label>
                         <p>¿Algún servicio adicional?(cejas, barba)</p>
-                        <label for="">
+                        <!---<label for="">
                             <input type="text" placeholder="Servicio adicional?" name="servAd">
-                        </label>
-                        <label for="">
+                        </label>---->
+                        <!---<label for="">
                             <p>Día deseado</p>
                             <input type="date" value="Día deseado" name="diaDese">
-                        </label>
+                        </label>--->
                         <input type="submit" value="Agendar">
                     </form>
                 </div>
@@ -72,11 +72,10 @@
 
 <?php 
     $nombCor=$_POST['nombreCorte']
-    $serviAd=$_POST['servAd'];
-    $diaDese=$_POST['diaDese'];
-
-        if($nombCor!=null || $serviAd !=null || $diaDese !=null) {
-            $sql="Para agendar debe llenar la información! como ('".$nombCor."','".$serviAd."','".$diaDese."')";
+    /*$serviAd=$_POST['servAd'];*/
+    /*$diaDese=$_POST['diaDese'];*/
+        if($nombCor!=null ||) {
+            $sql="insert into factura('".$nombCor."')'";
             if(mysqli_query($conexion, $sql)){
                 echo "Cuenta creada exitosamente";
                 header("location:confirmación-agendamiento.php")

@@ -57,12 +57,12 @@
 </html>
 
 <?php 
-    $idp=$_POST['txtid']
+    $idp=$_POST['idusuario']
     $user=$_POST ['txtUser']
-    $emailUser=$_POST['emailUser']
-    $password=$_POST['passUser']
+    $emailUser=$_POST['correoElectronico']
+    $password=$_POST['pcontraseña']
     if($user!=null || $email !=null) {
-        $sql="update persona set usuario='".$password."',passUser'" .$user. "',email='".$emailUser"' where id='".$idp."'";
+        $sql="update ususario set txtUser='".$user."',contraseña'" .$password. "',correoElectronico'".$emailUser"' where id='".$idp."'";
         if (mysqli_query($conexion, $sql)){
             echo "Cambio realizado con exito";
             header("location:perfiles-admin.php")

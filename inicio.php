@@ -18,10 +18,10 @@
                     <i class="fa fa-times" onclick="hideMenu()"></i>
                     <ul>
                         <li><a href="inicio.php">Inicio</a></li>
-                        <li><a href="login.php">Entrar</a></li>
+                        <li><a href="login.php">Cambiar cuenta</a></li>
                         <li><a href="agendamiento.php">Agendar</a></li>
                         <li><a href="catalogo.php">Cortes</a></li>
-                        <li><a href="controlador-cerrar-sesion.php">Cerrar sesión</a></li>
+                        <li><a href="login.php">Cerrar sesión</a></li>
                     </ul>
                 </div>
                 <i class="fa fa-bars" onclick="showMenu()"></i>
@@ -116,7 +116,7 @@
             <div class="comentarios-col">
                 <img src="imagenes/img-cliente1.jpg" alt="">
                 <div>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <p>¡Lo recomiendo!.</p>
                     <h3>Andrés Lasprilla</h3>
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -128,7 +128,7 @@
             <div class="comentarios-col">
                 <img src="imagenes/img-cliente2.jpg" alt="">
                 <div>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <p>¡Me gustó demasiado el servicio!.</p>
                     <h3>Sebastián Muñoz</h3>
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -141,7 +141,7 @@
     </section>
     <section class="contactenos">
         <h1>Contactenos en caso de que tenga algún problema con su producto</h1>
-        <a href="" class="hero-btn">Contactar</a>
+        <a href="https://api.whatsapp.com/send?phone=573008077639&text=Hola,%20quiero%20informar%20un%20problema%20con%20mi%20producto" class="hero-btn">Contactar</a>
     </section>
     <!-----JavaScript para menu responsive----->
     <script>
