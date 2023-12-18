@@ -1,9 +1,3 @@
-<?php include('conexion.php');
-    session_start();
-    if (!isset($_SESSION['idusuario'])) {
-        header('location:error404.php');
-    }
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +21,7 @@
                         <li><a href="login.php">Entrar</a></li>
                         <li><a href="agendamiento.php">Agendar</a></li>
                         <li><a href="catalogo.php">Cortes</a></li>
-                        <li><a href="logout.php">Cerrar sesión</a></li>
+                        <!---<li><a href="logout.php">Cerrar sesión</a></li>--->
                     </ul>
                 </div>
                 <i class="fa fa-bars" onclick="showMenu()"></i>

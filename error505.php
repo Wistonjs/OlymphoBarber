@@ -1,15 +1,9 @@
-<?php include('conexion.php');
-    session_start();
-    if (!isset($_SESSION['idusuario'])) {
-        header('location:error404.php');
-    }
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Su agendamiento fué asignado</title>
+    <title>ERROR 404</title>
     <link rel="stylesheet" href="confirmacion-agendamiento.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,10 +28,11 @@
             </body>
         </nav>
         <div class="text-box">
-            <h1>¡Confirmamos su agendamiento!</h1>
-            <p>¡Su agendamiento fué asignado!.</p>
-            <p>Puede seguir disfrutando de nuestra página web.</p>
-            <a href="inicio.php" class="hero-btn">Volver a inicio</a>
+            <h1>ERROR 505</h1>
+            <h1>La página no tiene conexión con el servidor</h1>
+            <p>Estamos teniendo fallas técnicas con el servidor.</p>
+            <p>Puede seguir disfrutando de nuestra página web cuando vuelva la conexión con el servidor.</p>
+            <a href="inicio-guest.php" class="hero-btn">Volver a inicio</a>
         </div>
     </section>
 </body>

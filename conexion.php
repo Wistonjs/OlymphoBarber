@@ -7,9 +7,13 @@ $db = "olympho";
 
 $conexion = new mysqli($server,  $user, $pass, $db);
 
-if ($conexion->connect_error) {
+/*if ($conexion->connect_error) {
     die("conexion fallida" . $conexion->$conexion->connect_error);
 } else {
     echo "conectado";
+}*/
+
+if (!$conexion) {
+    header("location:error505.php");
 }
 ?>

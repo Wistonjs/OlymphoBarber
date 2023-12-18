@@ -1,3 +1,9 @@
+<?php include('conexion.php');
+    session_start();
+    if (!isset($_SESSION['idusuario'])) {
+        header('location:error404.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,7 +87,11 @@
                                 }   
                         ?>
                         </div>
-                        <input name="btnSubmit" type="submit" value="Agendar">
+                        <input name="btnSubmit" type="submit" value="Agendar" href="">
+                        <?php if(isset($_POST['btnSubmit'])){
+                            header('location:confirmacion-agendamiento.php');
+                        } 
+                        ?>
                     </form>
                 </div>
             </div>

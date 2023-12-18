@@ -20,7 +20,7 @@
                 <h2>Iniciar sesion</h2>
                 <p>Inicie sesión con su cuenta</p>
                 <form class="form" method="post">
-                <div class="conexion">
+                <div class="">
                     <?php include 'conexion.php';
                     include 'controlador-login.php';
                     $sql = 'select * from usuario';

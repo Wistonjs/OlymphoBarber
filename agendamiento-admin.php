@@ -1,3 +1,9 @@
+<?php include('conexion.php');
+    session_start();
+    if (!isset($_SESSION['idusuario'])) {
+        header('location:error404.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,6 +48,7 @@
                 <table>
                     <thead>
                         <tr>
+                            <th>ID</th>
                             <th>Nombre del corte</th>
                             <th>Precio Corte</th>
                             <th>Detalles del corte</th>
@@ -57,9 +64,9 @@
                             <th type="hidden"><?php echo $row['idfactura']?></th>
                             <td><?php echo $row['nombreCortes']?></td>
                             <td><?php echo $row['precioCortes']?></td>
-                            <?php echo $row['detalleFinalCortes']?>
-                            <?php echo $row['fechaCorte']?>
-                            <?php echo $row['barberoCorte']?>
+                            <td><?php echo $row['detalleFinalCortes']?></td>
+                            <td><?php echo $row['fechaCorte']?></td>
+                            <td><?php echo $row['barberoCorte']?></td>
                             <td>
                                 <a href="register.php">Agregar</a>
                                 <a href="editar.php?idfactura=<?php echo $row['idfactura']?>">Editar</a>

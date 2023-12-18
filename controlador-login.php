@@ -7,9 +7,11 @@ if(!empty($_POST['btnIngresar'])) {
         $password=$_POST["contraseña"];
         $sql=$conexion->query("select * from usuario where txtUser='$user' and contraseña='$password'");
         if ($datos=$sql->fetch_assoc()){
+            session_start();
+            $_SESSION["id"]=$datos["idusuario"];
             header('location:inicio.php');
         } else {
-            echo '<div class="denegado">Clave incorrecta</div>';
+            echo '<h2 class="denegado">Clave incorrecta</h2>';
         }
     }
 }

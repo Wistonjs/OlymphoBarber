@@ -4,13 +4,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.conexion{
+    display: none;
+}
+
 .header{
     min-height: 100vh;
     width: 100%;
-    background-image: url(imagenes/img-inicio.jpg);
-    background-position: center;
-    background-size: cover;
-    position: relative;
 }
 
 nav {
@@ -58,51 +58,6 @@ nav img {
 
 .nav-links ul li:hover::after{
     width: 100%;
-}
-
-.text-box{
-    margin-top: 40px;
-    width: 90%;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    border: 1px solid #fff;
-    padding: 8px 34px;
-    font-size: 9px;
-    backdrop-filter: blur(5px);
-    background-color: rgba(255, 255, 255, 0.144);
-    border-radius: 10px;
-}
-
-.text-box h1{
-    font-size: 32px;
-}
-
-.text-box p{
-    margin: 10px 0 40px;
-    font-size: 17px;
-    color: #fff;
-}
-
-.hero-btn{
-    display: inline-flex;
-    text-decoration: none;
-    color: #000000;
-    border: 1px solid #fff;
-    padding: 12px 54px;
-    font-size: 19px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-}
-
-.hero-btn:hover{
-    border: 1px solid #3682f4;
-    background: #3682f4;
-    transition: 1s;
 }
 
 nav .fa{

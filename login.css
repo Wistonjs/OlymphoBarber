@@ -135,10 +135,6 @@ body{
     background-color: #7a7a9a;
 }
 
-.conexion{
-    display: none;
-}
-
 @media screen and (max-width:750px){
     html{
         font-size: 12px;
