@@ -6,7 +6,7 @@ if(!empty($_POST['btnIngresar'])) {
         $user=$_POST["txtUser"];
         $password=$_POST["contraseña"];
         $sql=$conexion->query("select * from usuario where txtUser='$user' and contraseña='$password'");
-        if ($datos=$sql->fetch_object()){
+        if ($datos=$sql->fetch_assoc()){
             header('location:inicio.php');
         } else {
             echo '<div class="denegado">Clave incorrecta</div>';

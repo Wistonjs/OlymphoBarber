@@ -43,6 +43,7 @@
                 <table>
                     <thead>
                         <tr>
+                            <th>ID</th>
                             <th>Nombre</th>
                             <th>Apellido</th>
                             <th>Teléfono</th>
@@ -52,9 +53,10 @@
                     </thead>
                     <TBody>
                             <?php 
-                            while($row = mysqli_fetch_assoc($result)){
+                            while($row = $result -> fetch_assoc()){
                             ?>
                         <tr>
+                            <td><?php echo $row['idusuario'] ?></td>
                             <td><?php echo $row['nombre'] ?></td>
                             <td><?php echo $row['apellido'] ?></td>
                             <td><?php echo $row['numeroTelefono'] ?></td>
@@ -62,8 +64,8 @@
                             <td><?php echo $row['contraseña'] ?></td>
                             <td>
                                 <a href="register.php">Agregar</a>
-                                <a href="editar.php?id=<?php echo $row['idusuario']?>">Editar</a>
-                                <a href="eliminar.php?id=<?php echo $row['idususario']?>">Eliminar</a> <?php echo "<br>" ?>
+                                <a href="editar.php?idusuario=<?php echo $row['idusuario'] ?>">Editar</a>
+                                <a href="eliminar.php?idusuario=<?php echo $row['idusuario'] ?>">Eliminar</a> <?php echo "<br>" ?>
                             </td>
                         </tr>
                         <?php } mysqli_close($conexion) ?>

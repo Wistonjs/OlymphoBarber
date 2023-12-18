@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Agendamiento</title>
     <link rel="stylesheet" href="agendamiento.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
 </head>
 <body>
-<div>
+<!---<div>
     <nav>
         <body>
             <a href="inicio.html"><img src="iconos/iconoprincipal-blanco.png" alt=""></a>
@@ -27,7 +27,7 @@
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </body>
     </nav>
-</div>
+</div>--->
     <header>
         <div class="container-form login">
             <div class="informacion">
@@ -39,20 +39,49 @@
             <div class="form-informacion">
                 <div class="form-informacion-childs">
                     <h2>Especificaciones</h2>
-                    <form class="form">
+                    <form class="form" method="post" action="agendamiento.php"> 
                         <p>Diga el nombre de su corte o especifíquelo</p>
                         <label for="">
-                            <input type="text" placeholder="Nombre de corte" name="nombreCorte">
+                            <input type="text" placeholder="Nombre de corte" name="nombre">
+                        </label>
+                        <p>Precio deseado</p>
+                        <label for="">
+                            <input type="text" placeholder="Gratis" name="precio">
                         </label>
                         <p>¿Algún servicio adicional?(cejas, barba)</p>
                         <label for="">
-                            <input type="text" placeholder="Servicio adicional?" name="servAd">
+                            <input type="text" placeholder="Servicio adicional?" name="detalle">
                         </label>
                         <label for="">
                             <p>Día deseado</p>
-                            <input type="date" value="Día deseado" name="diaDese">
+                            <input type="date" value="Día deseado" name="fecha">
                         </label>
-                        <input type="submit" value="Agendar">
+                        <p>Barbero deseado para su corte</p>
+                        <label for="">
+                            <input type="text" placeholder="Barbero" name="barbero">
+                        </label>
+                        <div class="controlador">
+                        <?php 
+                            include ("conexion.php");
+                            /*include ('controlador-agendamientos.php');*/
+                            $nombCor=$_POST['nombre'];
+                            $precCor=$_POST['precio'];   
+                            $detFin=$_POST['detalleFinal'];
+                            $fecCor=$_POST['fecha'];
+                            $barber=$_POST['barbero'];
+
+                                    $sql="INSERT INTO factura (nombreCortes, precioCortes, detalleFinalCortes, fechaCorte, barberoCorte) VALUES ('$nombCor', $precCor, '$detFin', '$fecCor', '$barber')";
+                                    if  (isset($_POST["btnSubmit"])){
+                                        if(mysqli_query($conexion, $sql)){
+                                        echo "Agendamiento agendado exitosamente";
+                                        header("location:confirmación-agendamiento.php");
+                                    } else{
+                                        echo "Hay un error" .$sql."<br>".mysqli_error($conexion);
+                                    }   
+                                }   
+                        ?>
+                        </div>
+                        <input name="btnSubmit" type="submit" value="Agendar">
                     </form>
                 </div>
             </div>
@@ -69,20 +98,3 @@
     </header>
 </body>
 </html>
-
-<?php 
-    $nombCor=$_POST['nombreCorte']
-    $serviAd=$_POST['servAd'];
-    $diaDese=$_POST['diaDese'];
-
-        if($nombCor!=null || $serviAd !=null || $diaDese !=null) {
-            $sql="Para agendar debe llenar la información! como ('".$nombCor."','".$serviAd."','".$diaDese."')";
-            if(mysqli_query($conexion, $sql)){
-                echo "Cuenta creada exitosamente";
-                header("location:confirmación-agendamiento.php")
-            } else{
-                echo "Hay un error" .$sql. "<br>" .mysqli_error($conexion)
-            }
-        }
-?>
-

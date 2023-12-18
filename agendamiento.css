@@ -10,10 +10,6 @@
 .header{
     min-height: 100%;
     width: 100%;
-    background-image: url(imagenes/img-fondo-agendando.jpg);
-    background-position: center;
-    background-size: cover;
-    position: relative;
 }
 
 nav {
@@ -76,10 +72,6 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url(imagenes/img-login-logout.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
 }
 
 .container-form{
@@ -178,6 +170,7 @@ body{
 
 .form{
     margin: 30px 0 0 0;
+    text-align: center;
 }
 
 .form label{
@@ -249,3 +242,4 @@ body{
         border-top-right-radius: 0;
     }
 }
+

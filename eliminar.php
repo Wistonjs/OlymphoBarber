@@ -1,8 +1,9 @@
-<?php include 'conexion.php'
+<?php include 'conexion.php';
+
     $idp=$_GET['idusuario'];
 
-    $sql="delete from usuario where id= '".$idp."'";
+    $sql="delete from usuario where idusuario= ".$idp;
 
     $result = mysqli_query($conexion, $sql);
-        header(location:perfiles-admin.php)
+        header("location:perfiles-admin.php");
 ?>

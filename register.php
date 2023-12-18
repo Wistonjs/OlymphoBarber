@@ -32,19 +32,19 @@
                             </select>
                         </label>--->
                         <label for="">
-                            <input type="text" placeholder="Nombre" name="nombre">
+                            <input type="text" placeholder="Nombre" name="nombre" id="nombre" required="required">
                         </label>
                         <label for="">
-                            <input type="text" placeholder="Apellido" name="apellido">
+                            <input type="text" placeholder="Apellido" name="apellido" id="apellido" required="required">
                         </label>
                         <label for="">
-                            <input type="text" placeholder="Usuario" name="txtUser">
+                            <input type="text" placeholder="Usuario" name="txtUser" id="txtUser" required="required">
                         </label>
                         <label for="">
-                            <input type="email" placeholder="Correo electrónico" name="correoElectronicor">
+                            <input type="email" placeholder="Correo electrónico" name="correoElectronico" id="correoElectronico" required="required">
                         </label>
                         <label for="">
-                            <input type="password" placeholder="Contraseña" name="contraseñar">
+                            <input type="password" placeholder="Contraseña" name="contraseña" id="contraseña" required="required">
                         </label>
                         <label for="">
                             <!-----<input type="number" placeholder="Número de teléfono" name="numUser">----->
@@ -66,15 +66,15 @@
     /*$genero=$_POST['genero'];*/
     $nombre=$_POST['nombre'];
     $apellido=$_POST['apellido'];
-    $user=$_POST['txtUser'];
+    $User=$_POST['txtUser'];
     $emailUser=$_POST['correoElectronico'];
     $password=$_POST['contraseña'];
     /*$contactUser=$_POST['numUser'];*/
         if($nombre !=null || $apellido !=null || $user !=null || $emailUser !=null || $password !=null){ 
-            $sql="insert into usuario (nombre, apellido, txtUser, correoElectronico, contraseña) values ('".$nombre."','".$apellido."','".$user."','".$emailUser."','".$password."')"; /*.$contactUser."')";*/
+            $sql="insert into usuario (nombre,apellido,txtUser,correoElectronico,contraseña) values('".$nombre."','".$apellido."','".$User."','".$emailUser."','".$password."')"; /*.$contactUser."')";*/
             if(mysqli_query($conexion, $sql)){
                 echo "Cuenta creada exitosamente";
-                header("location:inicio.php");
+                header("location:login.php");
             } else{
                 echo "Hay un error" .$sql. "<br>" .mysqli_error($conexion);
             }

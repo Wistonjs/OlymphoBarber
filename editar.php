@@ -33,19 +33,19 @@
         </nav>
         <?php
         $id=$GET['id'];
-        $sql="select * from persona where id='" .$id."'";
+        $sql="select * from persona where idusuario='".$id."'";
         $result = mysqli_query($conexion, $sql);
-        while ($row = mysqli_fetch_assoc($result)) {
+        while ($row = $result->fetch_assoc()) {
         ?>
         <div class="text-box">
             <form action="editar.php" method="post">
-                <input type="hidden" name="txtid" value="<?php echo $row['id']?>"><br><br>
+                <input type="hidden" name="idusuario" value="<?php echo $row['idusuario']?>"><br><br>
                 <label>Usuario</label>
-                <input type="text" name="txtUser" value="<?php echo $row['usuario']?>"><br><br>
+                <input type="text" name="txtUser" value="<?php echo $row['txtUser']?>"><br><br>
                 <label>Email</label>
-                <input type="text" name="emailUser" value="<?php echo $row['email']?>"><br><br>
+                <input type="text" name="correoElectronico" value="<?php echo $row['email']?>"><br><br>
                 <label>Contraseña</label>
-                <input type= "" name="passUser" value="<?php echo $row['contrasenia']?>">
+                <input type= "" name="contraseña" value="<?php echo $row['contraseña']?>">
                 <input type="submit" name="" value="Actualizar">
                 <a href="perfiles_admin.php">Regresar</a> 
             </form>
@@ -57,17 +57,17 @@
 </html>
 
 <?php 
-    $idp=$_POST['idusuario']
-    $user=$_POST ['txtUser']
-    $emailUser=$_POST['correoElectronico']
-    $password=$_POST['pcontraseña']
-    if($user!=null || $email !=null) {
-        $sql="update ususario set txtUser='".$user."',contraseña'" .$password. "',correoElectronico'".$emailUser"' where id='".$idp."'";
-        if (mysqli_query($conexion, $sql)){
-            echo "Cambio realizado con exito";
-            header("location:perfiles-admin.php")
-        } else {
-            echo "Ocurrió un error" .$sql. "<br>" . mysqli_error($conexion);
-        }
+    $idp=$_POST['idusuario'];
+    $User=$_POST ['txtUser'];
+    $emailUser=$_POST['correoElectronico'];
+    $password=$_POST['contraseña'];
+        if($User!=null || $emailUser!=null || $password!=null) {
+            $sql="update usuario SET txtUser='".$User."',contraseña='" .$password. "', correoElectronico='".$emailUser."' where idusuario='".$idp."'";
+            if ($conexion->query($sql)=== true){
+                echo "Cambio realizado con exito";
+                header("location:perfiles-admin.php"); 
+            } else {
+                echo "Ocurrió un error".$sql."<br>".$conexion->error;
+            }
     }
 ?>
