@@ -13,10 +13,10 @@
                 <div class="nav-links" id="navLinks">
                     <i class="fa fa-times" onclick="hideMenu()"></i>
                     <ul>
-                        <li><a href="inicio-admin.html">Inicio</a></li>
+                        <li><a href="inicio-admin.php">Inicio</a></li>
                         <li><a href="perfiles-admin.php">Usuarios</a></li>
-                        <li><a href="agendamiento-admin.html">Agendamientos</a></li>
-                        <li><a href="catalogo-admin.html">Cortes</a></li>
+                        <li><a href="agendamiento-admin.php">Agendamientos</a></li>
+                        <li><a href="catalogo-admin.php">Cortes</a></li>
                     </ul>
                 </div>
                 <i class="fa fa-bars" onclick="showMenu()"></i>

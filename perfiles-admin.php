@@ -20,14 +20,14 @@
     <section class="header">
         <nav>
             <body>
-                <a href="inicio.html"><img src="iconos/iconoprincipal-blanco.png" alt=""></a>
+                <a href="inicio.php"><img src="iconos/iconoprincipal-blanco.png" alt=""></a>
                 <div class="nav-links" id="navLinks">
                     <i class="fa fa-times" onclick="hideMenu()"></i>
                     <ul>
-                        <li><a href="inicio.html">Inicio</a></li>
+                        <li><a href="inicio.php">Inicio</a></li>
                         <li><a href="login.php">Agendamientos</a></li>
                         <li><a href="login.php">Usuarios</a></li>
-                        <li><a href="catalogo.html">Productos</a></li>
+                        <li><a href="catalogo.php">Productos</a></li>
                     </ul>
                 </div>
                 <i class="fa fa-bars" onclick="showMenu()"></i>
@@ -56,7 +56,7 @@
                             while($row = $result -> fetch_assoc()){
                             ?>
                         <tr>
-                            <td><?php echo $row['idusuario'] ?></td>
+                            <td type= "hidden"><?php echo $row['idusuario'] ?></td>
                             <td><?php echo $row['nombre'] ?></td>
                             <td><?php echo $row['apellido'] ?></td>
                             <td><?php echo $row['numeroTelefono'] ?></td>

@@ -44,9 +44,9 @@
                         <label for="">
                             <input type="text" placeholder="Nombre de corte" name="nombre">
                         </label>
-                        <p>Precio deseado</p>
+                        <p>Alguna sugerencia para su corte?</p>
                         <label for="">
-                            <input type="text" placeholder="Gratis" name="precio">
+                            <input type="text" placeholder="" name="precio">
                         </label>
                         <p>¿Algún servicio adicional?(cejas, barba)</p>
                         <label for="">

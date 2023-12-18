@@ -13,21 +13,21 @@
 <body>
 <div class="conexion">
         <?php include 'conexion.php';
-        $sql = 'select * from usuario';
+        $sql = 'select * from factura';
         $result = mysqli_query($conexion,$sql);
         ?>
     </div>
     <section class="header">
         <nav>
             <body>
-                <a href="inicio.html"><img src="iconos/iconoprincipal-blanco.png" alt=""></a>
+                <a href="inicio.php"><img src="iconos/iconoprincipal-blanco.png" alt=""></a>
                 <div class="nav-links" id="navLinks">
                     <i class="fa fa-times" onclick="hideMenu()"></i>
                     <ul>
-                        <li><a href="inicio.html">Inicio</a></li>
-                        <li><a href="agendamiento-admin.html">Agendamientos</a></li>
+                        <li><a href="inicio.php">Inicio</a></li>
+                        <li><a href="agendamiento-admin.php">Agendamientos</a></li>
                         <li><a href="perfiles-admin.php">Usuarios</a></li>
-                        <li><a href="catalogo.html">Productos</a></li>
+                        <li><a href="catalogo.php">Productos</a></li>
                     </ul>
                 </div>
                 <i class="fa fa-bars" onclick="showMenu()"></i>
@@ -42,30 +42,28 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
-                            <th>Corte requerido</th>
-                            <th>Compra de productos</th>
-                            <th>Servicio adicional</th>
-                            <th>Fecha agendamiento</th>
+                            <th>Nombre del corte</th>
+                            <th>Precio Corte</th>
+                            <th>Detalles del corte</th>
+                            <th>Fecha del corte</th>
+                            <th>Barbero solicitado</th>
                         </tr>
                     </thead>
                     <TBody>
                             <?php 
-                            while($row = mysqli_fetch_assoc($result)){
+                            while($row = $result -> fetch_assoc()){
                             ?>
                         <tr>
-                            <th type="hidden"><?php echo $row['idusuario']?></th>
-                            <td><?php echo $row['nombre']?></td>
-                            <td><?php echo $row['apellido']?></td>
-                            <!-----<td><?php echo $row['reqCorte']?></td>------>
-                            <!-----<td><?php echo $row['compraPro']?></td>------>
-                            <!-----<td><?php echo $row['servAd']?></td>------>
-                            <!-----<td><?php echo $row['fechAg']?></td>------>
+                            <th type="hidden"><?php echo $row['idfactura']?></th>
+                            <td><?php echo $row['nombreCortes']?></td>
+                            <td><?php echo $row['precioCortes']?></td>
+                            <?php echo $row['detalleFinalCortes']?>
+                            <?php echo $row['fechaCorte']?>
+                            <?php echo $row['barberoCorte']?>
                             <td>
                                 <a href="register.php">Agregar</a>
-                                <a href="editar.php?id=<?php echo $row['idusuario']?>">Editar</a>
-                                <a href="eliminar.php?id=<?php echo $row['idusuario']?>">Eliminar</a> <?php echo "<br>" ?>
+                                <a href="editar.php?idfactura=<?php echo $row['idfactura']?>">Editar</a>
+                                <a href="eliminar.php?idfactura=<?php echo $row['idfactura']?>">Eliminar</a> <?php echo "<br>" ?>
                             </td>
                         </tr>
                         <?php } mysqli_close($conexion) ?>
